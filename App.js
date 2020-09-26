@@ -1,114 +1,152 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
-import React from 'react';
+import React, {Component} from 'react';
 import {
-  SafeAreaView,
+  Image,
   StyleSheet,
-  ScrollView,
-  View,
   Text,
-  StatusBar,
+  TextComponent,
+  TextInput,
+  View,
 } from 'react-native';
+import Coffe from './Rectangle.png';
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+const App = () => {
+  return <StylingReactNativeComponent />;
+};
 
-const App: () => React$Node = () => {
+const StylingReactNativeComponent = () => {
   return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
-            </View>
-          )}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
-          </View>
-        </ScrollView>
-      </SafeAreaView>
-    </>
+    <View style={{padding: 30, backgroundColor: '#543A20', flex: 1}}>
+      <Text style={Styles.text}>Styling React native Component</Text>
+      <View
+        style={{
+          width: 100,
+          height: 100,
+          backgroundColor: 'blue',
+          borderWidth: 2,
+          borderColor: 'red',
+          marginTop: 20,
+          marginLeft: 20,
+        }}
+      />
+
+      <View
+        style={{
+          paddingTop: 2,
+          paddingLeft: 2,
+          paddingRight: 2,
+          width: 140,
+          borderRadius: 10,
+          backgroundColor: '#CE9760',
+        }}>
+        <Image
+          source={Coffe}
+          style={{width: 136, height: 101, borderRadius: 10}}
+        />
+        <Text
+          style={{
+            fontSize: 15,
+            fontWeight: '600',
+            marginTop: 1,
+            color: '#543A20',
+            marginLeft: 7,
+          }}>
+          Espresso
+        </Text>
+        <Text
+          style={{
+            fontSize: 7,
+            fontWeight: '600',
+            marginTop: 1,
+            color: '#543A20',
+            marginLeft: 7,
+            maxWidth: 92,
+          }}>
+          Espresso Steamed milk and thin of foam
+        </Text>
+        <View
+          style={{
+            backgroundColor: '#543A20',
+            borderRadius: 10,
+            marginLeft: 33,
+            marginRight: 33,
+            marginVertical: 5,
+          }}>
+          <Text
+            style={{
+              fontSize: 7,
+              color: '#CE9760',
+              fontWeight: '600',
+              textAlign: 'center',
+            }}>
+            Add To Chart
+          </Text>
+        </View>
+      </View>
+    </View>
   );
 };
 
-const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
-  },
-  engine: {
-    position: 'absolute',
-    right: 0,
-  },
-  body: {
-    backgroundColor: Colors.white,
-  },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
-  },
-  sectionDescription: {
-    marginTop: 8,
+const Styles = StyleSheet.create({
+  text: {
+    color: 'red',
     fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
+    marginLeft: 20,
+    marginTop: 40,
+    fontWeight: 'bold',
   },
 });
+
+const SampleComponent = () => {
+  return (
+    <View>
+      <View
+        style={{
+          width: 80,
+          height: 20,
+          backgroundColor: 'red',
+        }}></View>
+      <Ridwan />
+      <Ridwan />
+      <Text>Riwdan</Text>
+      <Photo />
+      <TextInput style={{borderWidth: 1}} />
+      <BoxGreen />
+      <Profile />
+    </View>
+  );
+};
+
+const Ridwan = () => {
+  return <Text>Ridwan Romadhon</Text>;
+};
+
+const Photo = () => {
+  return (
+    <Image
+      style={{width: 100, height: 100}}
+      source={{uri: 'https://placeimg.com/640/480/nature'}}
+    />
+  );
+};
+
+class BoxGreen extends Component {
+  render() {
+    return <Text>Ini Component dari class</Text>;
+  }
+}
+
+class Profile extends Component {
+  render() {
+    return (
+      <View>
+        <Image
+          source={{uri: 'https://placeimg.com/640/480/animals'}}
+          style={{width: 100, height: 100, borderRadius: 50}}
+        />
+        <Text style={{color: 'blue', fontSize: 14}}>Hallo Ini Hewan</Text>
+      </View>
+    );
+  }
+}
 
 export default App;
