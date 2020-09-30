@@ -1,9 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import {ScrollView, View} from 'react-native';
+import BasicJavaScript from './pages/BasicJavaScript';
 import Comunication from './pages/Comunication';
 import FlexBox from './pages/FlexBox';
 import PositionReactNative from './pages/Position';
 import PropsDinamis from './pages/PropsDinamis';
+import ReactNatveSvg from './pages/ReactNatveSvg';
 import SampleComponent from './pages/SampleComponent';
 import StylingComponent from './pages/StylingComponent';
 
@@ -21,8 +23,10 @@ const App = () => {
         {/* <SampleComponent /> */}
         {/* <FlexBox /> */}
         {/* <PropsDinamis /> */}
-        <Comunication />
+        {/* <Comunication /> */}
         {/* <PositionReactNative /> */}
+        {/* <BasicJavaScript /> */}
+        <ReactNatveSvg />
       </ScrollView>
     </View>
   );
