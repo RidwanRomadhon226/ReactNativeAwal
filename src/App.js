@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {ScrollView, View} from 'react-native';
 import BasicJavaScript from './pages/BasicJavaScript';
+import CallApiValinlaJs from './pages/CallApiValinlaJs';
 import Comunication from './pages/Comunication';
 import FlexBox from './pages/FlexBox';
 import PositionReactNative from './pages/Position';
@@ -26,7 +27,8 @@ const App = () => {
         {/* <Comunication /> */}
         {/* <PositionReactNative /> */}
         {/* <BasicJavaScript /> */}
-        <ReactNatveSvg />
+        {/* <ReactNatveSvg /> */}
+        <CallApiValinlaJs />
       </ScrollView>
     </View>
   );
