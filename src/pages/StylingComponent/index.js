@@ -8,9 +8,9 @@ import {
   TextInput,
   View,
 } from 'react-native';
-import Coffe from './Rectangle.png';
+import Coffe from '../../assets/images/Rectangle.png';
 
-const StylingReactNativeComponent = () => {
+const StylingComponent = () => {
   return (
     <View style={{padding: 30, backgroundColor: '#543A20'}}>
       <Text style={Styles.text}>Styling React native Component</Text>
@@ -93,4 +93,4 @@ const Styles = StyleSheet.create({
   },
 });
 
-export default StylingReactNativeComponent;
+export default StylingComponent;

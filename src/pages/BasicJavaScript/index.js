@@ -1,14 +1,14 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 
-const PositionReactNative = () => {
+const BasicJavaScript = () => {
   return (
     <View>
-      <Text>Hallo Possition React naive</Text>
+      <Text>BasicJavaScript</Text>
     </View>
   );
 };
 
-export default PositionReactNative;
+export default BasicJavaScript;
 
 const styles = StyleSheet.create({});
